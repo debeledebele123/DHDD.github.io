@@ -13,6 +13,11 @@ h2 {
   padding-bottom: 5px;
 }
 
+h3 {
+  color: #0078d7;
+  margin-top: 1em;
+}
+
 /* HEADER */
 header {
   background: #222;
@@ -67,17 +72,29 @@ section {
 }
 
 /* SKILLS LIST */
-#skills ul {
+#skills ul,
+.resume-section ul {
   list-style: none;
   padding: 0;
 }
 
-#skills li {
+#skills li,
+.resume-section li {
   background: #e0f7fa;
   display: inline-block;
   margin: 5px 10px 5px 0;
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+/* CONTACT LINKS */
+section#contact a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+section#contact a:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */
@@ -117,5 +134,11 @@ img {
     width: 100%;
     text-align: center;
     margin: 10px 0;
+  }
+
+  #skills li,
+  .resume-section li {
+    display: block;
+    width: 100%;
   }
 }
