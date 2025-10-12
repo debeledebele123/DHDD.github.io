@@ -1,14 +1,14 @@
-/* GENERAL */
+/* ================== GENERAL ================== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f0f2f5;
   margin: 0;
   line-height: 1.6;
   scroll-behavior: smooth;
-  padding-top: 70px; /* space for fixed navbar */
+  padding-top: 70px; /* for fixed navbar */
 }
 
-/* NAVBAR */
+/* ================== NAVBAR ================== */
 nav#navbar {
   position: fixed;
   top: 0;
@@ -36,9 +36,12 @@ nav#navbar a {
   transition: background 0.3s;
 }
 
-nav#navbar a:hover { background: #00bcd4; border-radius: 5px; }
+nav#navbar a:hover {
+  background: #00bcd4;
+  border-radius: 5px;
+}
 
-/* HEADER / HERO */
+/* ================== HEADER / HERO ================== */
 header {
   text-align: center;
   padding: 3em 1em;
@@ -64,7 +67,7 @@ header .profile-img {
 header h1 { margin: 10px 0 5px; font-size: 2em; }
 header p { font-size: 1.1em; font-weight: 500; }
 
-/* SECTION STYLING */
+/* ================== SECTIONS ================== */
 section {
   max-width: 900px;
   margin: 2em auto;
@@ -79,46 +82,9 @@ section {
 
 section.visible { opacity: 1; transform: translateY(0); }
 
-/* PROJECT CARDS */
-.project {
-  margin-bottom: 20px;
-  padding: 15px;
-  border-radius: 10px;
-  background: #f9f9f9;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
+h2 { text-align: center; margin-bottom: 1em; color: #007c91; }
 
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.project .btn {
-  display: inline-block;
-  margin: 5px 10px 10px 0;
-  padding: 8px 15px;
-  background-color: #00bcd4;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.project .btn:hover {
-  background-color: #007c91;
-  transform: translateY(-2px);
-}
-
-/* SKILLS */
-#skills ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-/* PROJECT CARDS CONTAINER */
+/* ================== PROJECT CARDS ================== */
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -126,7 +92,6 @@ section.visible { opacity: 1; transform: translateY(0); }
   gap: 20px;
 }
 
-/* INDIVIDUAL PROJECT CARD */
 .project-card {
   position: relative;
   width: 280px;
@@ -150,7 +115,6 @@ section.visible { opacity: 1; transform: translateY(0); }
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* OVERLAY */
 .project-card .overlay {
   position: absolute;
   top: 0;
@@ -198,19 +162,19 @@ section.visible { opacity: 1; transform: translateY(0); }
   transform: translateY(-2px);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .projects-container {
-    flex-direction: column;
-    align-items: center;
-  }
+/* ================== SKILLS ================== */
+#skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 
 #skills li {
   background: #00bcd4;
   color: #fff;
-  margin: 5px 10px 5px 0;
+  margin: 5px 10px;
   padding: 8px 12px;
   border-radius: 20px;
   font-weight: bold;
@@ -219,7 +183,7 @@ section.visible { opacity: 1; transform: translateY(0); }
 
 #skills li:hover { background: #007c91; }
 
-/* RESUME / CARD SECTIONS */
+/* ================== RESUME ================== */
 .resume-section {
   margin-bottom: 20px;
   padding: 15px;
@@ -228,7 +192,6 @@ section.visible { opacity: 1; transform: translateY(0); }
   border-radius: 8px;
 }
 
-/* DOWNLOAD RESUME BUTTON */
 .download-resume {
   text-align: center;
   margin-top: 20px;
@@ -246,19 +209,33 @@ section.visible { opacity: 1; transform: translateY(0); }
   transform: translateY(-2px);
 }
 
-/* CONTACT */
-section#contact a { color: #00bcd4; text-decoration: none; font-weight: bold; }
-section#contact a:hover { text-decoration: underline; }
+/* ================== CONTACT ================== */
+section#contact a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-/* FOOTER */
-footer { text-align: center; padding: 1.5em; background: #222; color: white; margin-top: 2em; }
+section#contact a:hover {
+  text-decoration: underline;
+}
 
-/* RESPONSIVE */
+/* ================== FOOTER ================== */
+footer {
+  text-align: center;
+  padding: 1.5em;
+  background: #222;
+  color: white;
+  margin-top: 2em;
+}
+
+/* ================== RESPONSIVE ================== */
 @media (max-width: 768px) {
   section { margin: 1em; padding: 1.5em; }
   header { padding: 2em 1em; }
   #skills li { display: block; width: 100%; text-align: center; }
-  .project .btn, .download-resume .btn { width: 100%; text-align: center; margin: 10px 0; }
+  .project-card { width: 90%; height: 180px; }
+  .project-card .overlay .btn { width: 100%; margin: 5px 0; }
 }
 
 @media (max-width: 600px) {
@@ -267,6 +244,6 @@ footer { text-align: center; padding: 1.5em; background: #222; color: white; mar
   header .profile-img { width: 120px; height: 120px; }
 }
 
-/* FADE-IN ANIMATION */
+/* ================== FADE-IN ================== */
 .fade-in { opacity: 0; transform: translateY(20px); transition: all 1s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
