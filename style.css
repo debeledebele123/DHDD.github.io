@@ -141,6 +141,27 @@ footer {
   color: white;
   margin-top: 2em;
 }
+/* Download Resume Button */
+.download-resume {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.download-resume .btn {
+  background-color: #0078d7;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.download-resume .btn:hover {
+  background-color: #005f9e;
+  transform: translateY(-2px);
+}
+
 
 /* RESPONSIVE DESIGN */
 img { max-width: 100%; height: auto; }
