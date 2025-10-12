@@ -1,25 +1,14 @@
-/* GENERAL STYLES */
+/* GENERAL */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f5f5f5;
   margin: 0;
-  color: #222;
   line-height: 1.6;
   scroll-behavior: smooth;
+  padding-top: 70px; /* for fixed navbar */
 }
 
-h2 {
-  color: #00bcd4;
-  border-bottom: 2px solid #00bcd4;
-  padding-bottom: 5px;
-}
-
-h3 {
-  color: #0078d7;
-  margin-top: 1em;
-}
-
-/* NAVIGATION BAR */
+/* NAVBAR */
 nav#navbar {
   position: fixed;
   top: 0;
@@ -30,44 +19,33 @@ nav#navbar {
 }
 
 nav#navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   flex-wrap: wrap;
 }
 
-nav#navbar li {
-  margin: 0;
-}
+nav#navbar li { margin: 0; }
 
 nav#navbar a {
   display: block;
   padding: 15px 20px;
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s;
 }
 
-nav#navbar a:hover {
-  background: #00bcd4;
-  color: white;
-  border-radius: 5px;
-}
-
-/* Add top padding to body for navbar */
-body {
-  padding-top: 70px;
-}
+nav#navbar a:hover { background: #00bcd4; border-radius: 5px; }
 
 /* HEADER */
 header {
-  background: #222;
-  color: white;
   text-align: center;
   padding: 2em 1em;
+  background: #222;
+  color: #fff;
   opacity: 0;
   transform: translateY(20px);
   transition: all 1s ease;
@@ -75,17 +53,20 @@ header {
 
 header.visible { opacity: 1; transform: translateY(0); }
 
-header h1 span { color: #00bcd4; }
-
-header .logo { width: 120px; display: block; margin: 0 auto 10px auto; }
-
-header .profile-img { width: 150px; height: 150px; border-radius: 50%; display: block; margin: 10px auto; border: 3px solid #00bcd4; }
+header .profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 10px auto;
+  border: 3px solid #00bcd4;
+  display: block;
+}
 
 /* SECTIONS */
 section {
   max-width: 900px;
   margin: 2em auto;
-  background: white;
+  background: #fff;
   padding: 2em;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -97,7 +78,7 @@ section {
 section.visible { opacity: 1; transform: translateY(0); }
 
 /* PROJECT BUTTONS */
-.project .btn {
+.project .btn, .download-resume .btn {
   display: inline-block;
   margin: 5px 10px 10px 0;
   padding: 8px 15px;
@@ -105,26 +86,28 @@ section.visible { opacity: 1; transform: translateY(0); }
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s, transform 0.3s;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
 }
 
-.project .btn:hover {
+.project .btn:hover, .download-resume .btn:hover {
   background-color: #007c91;
   transform: translateY(-2px);
 }
 
+/* DOWNLOAD RESUME BUTTON */
+.download-resume { text-align: center; margin-top: 20px; }
+
 /* SKILLS & RESUME LISTS */
-#skills ul,
-.resume-section ul {
+#skills ul, .resume-section ul {
   list-style: none;
   padding: 0;
 }
 
-#skills li,
-.resume-section li {
-  background: #e0f7fa;
+#skills li, .resume-section li {
   display: inline-block;
   margin: 5px 10px 5px 0;
+  background: #e0f7fa;
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -134,49 +117,21 @@ section#contact a { color: #00bcd4; text-decoration: none; }
 section#contact a:hover { text-decoration: underline; }
 
 /* FOOTER */
-footer {
-  text-align: center;
-  padding: 1.5em;
-  background: #222;
-  color: white;
-  margin-top: 2em;
+footer { text-align: center; padding: 1.5em; background: #222; color: white; margin-top: 2em; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  section { margin: 1em; padding: 1.5em; }
 }
-/* Download Resume Button */
-.download-resume {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.download-resume .btn {
-  background-color: #0078d7;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.download-resume .btn:hover {
-  background-color: #005f9e;
-  transform: translateY(-2px);
-}
-
-
-/* RESPONSIVE DESIGN */
-img { max-width: 100%; height: auto; }
-
-@media (max-width: 768px) { section { margin: 1em; padding: 1.5em; } }
 
 @media (max-width: 600px) {
   nav#navbar ul { flex-direction: column; }
   nav#navbar a { text-align: center; padding: 12px 0; }
-  header .logo { width: 80px; }
   header .profile-img { width: 120px; height: 120px; }
-  .project .btn { display: block; width: 100%; text-align: center; margin: 10px 0; }
+  .project .btn, .download-resume .btn { width: 100%; text-align: center; margin: 10px 0; }
   #skills li, .resume-section li { display: block; width: 100%; }
 }
 
-/* FADE-IN CLASS */
+/* FADE-IN ANIMATION */
 .fade-in { opacity: 0; transform: translateY(20px); transition: all 1s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
