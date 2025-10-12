@@ -1,11 +1,11 @@
 /* GENERAL */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f5f5;
+  background: #f0f2f5;
   margin: 0;
   line-height: 1.6;
   scroll-behavior: smooth;
-  padding-top: 70px; /* for fixed navbar */
+  padding-top: 70px; /* space for fixed navbar */
 }
 
 /* NAVBAR */
@@ -21,13 +21,11 @@ nav#navbar {
 nav#navbar ul {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
-  flex-wrap: wrap;
 }
-
-nav#navbar li { margin: 0; }
 
 nav#navbar a {
   display: block;
@@ -40,11 +38,11 @@ nav#navbar a {
 
 nav#navbar a:hover { background: #00bcd4; border-radius: 5px; }
 
-/* HEADER */
+/* HEADER / HERO */
 header {
   text-align: center;
-  padding: 2em 1em;
-  background: #222;
+  padding: 3em 1em;
+  background: linear-gradient(135deg,#00bcd4,#007c91);
   color: #fff;
   opacity: 0;
   transform: translateY(20px);
@@ -57,19 +55,23 @@ header .profile-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin: 10px auto;
-  border: 3px solid #00bcd4;
+  margin: 0 auto 15px;
   display: block;
+  border: 4px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* SECTIONS */
+header h1 { margin: 10px 0 5px; font-size: 2em; }
+header p { font-size: 1.1em; font-weight: 500; }
+
+/* SECTION STYLING */
 section {
   max-width: 900px;
   margin: 2em auto;
   background: #fff;
   padding: 2em;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   opacity: 0;
   transform: translateY(20px);
   transition: all 1s ease;
@@ -77,8 +79,22 @@ section {
 
 section.visible { opacity: 1; transform: translateY(0); }
 
-/* PROJECT BUTTONS */
-.project .btn, .download-resume .btn {
+/* PROJECT CARDS */
+.project {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project .btn {
   display: inline-block;
   margin: 5px 10px 10px 0;
   padding: 8px 15px;
@@ -90,30 +106,60 @@ section.visible { opacity: 1; transform: translateY(0); }
   transition: background 0.3s, transform 0.3s;
 }
 
-.project .btn:hover, .download-resume .btn:hover {
+.project .btn:hover {
   background-color: #007c91;
   transform: translateY(-2px);
 }
 
-/* DOWNLOAD RESUME BUTTON */
-.download-resume { text-align: center; margin-top: 20px; }
-
-/* SKILLS & RESUME LISTS */
-#skills ul, .resume-section ul {
+/* SKILLS */
+#skills ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#skills li, .resume-section li {
-  display: inline-block;
+#skills li {
+  background: #00bcd4;
+  color: #fff;
   margin: 5px 10px 5px 0;
-  background: #e0f7fa;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
-/* CONTACT LINKS */
-section#contact a { color: #00bcd4; text-decoration: none; }
+#skills li:hover { background: #007c91; }
+
+/* RESUME / CARD SECTIONS */
+.resume-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-left: 5px solid #00bcd4;
+  background: #f7f9fa;
+  border-radius: 8px;
+}
+
+/* DOWNLOAD RESUME BUTTON */
+.download-resume {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.download-resume .btn {
+  background-color: #0078d7;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1em;
+}
+
+.download-resume .btn:hover {
+  background-color: #005f9e;
+  transform: translateY(-2px);
+}
+
+/* CONTACT */
+section#contact a { color: #00bcd4; text-decoration: none; font-weight: bold; }
 section#contact a:hover { text-decoration: underline; }
 
 /* FOOTER */
@@ -122,14 +168,15 @@ footer { text-align: center; padding: 1.5em; background: #222; color: white; mar
 /* RESPONSIVE */
 @media (max-width: 768px) {
   section { margin: 1em; padding: 1.5em; }
+  header { padding: 2em 1em; }
+  #skills li { display: block; width: 100%; text-align: center; }
+  .project .btn, .download-resume .btn { width: 100%; text-align: center; margin: 10px 0; }
 }
 
 @media (max-width: 600px) {
   nav#navbar ul { flex-direction: column; }
-  nav#navbar a { text-align: center; padding: 12px 0; }
+  nav#navbar a { padding: 12px 0; }
   header .profile-img { width: 120px; height: 120px; }
-  .project .btn, .download-resume .btn { width: 100%; text-align: center; margin: 10px 0; }
-  #skills li, .resume-section li { display: block; width: 100%; }
 }
 
 /* FADE-IN ANIMATION */
