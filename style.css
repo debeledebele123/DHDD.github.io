@@ -1,3 +1,24 @@
+/* General body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+}
+
+header h1 span {
+  color: #00bcd4;
+}
+
 /* Logo */
 header .logo {
   width: 120px;
@@ -15,12 +36,43 @@ header .profile-img {
   border: 3px solid #00bcd4;
 }
 
-/* Center text in header */
-header h1, header p {
-  text-align: center;
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 2em auto;
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Highlight span in header */
-header h1 span {
+h2 {
   color: #00bcd4;
+  border-bottom: 2px solid #00bcd4;
+  padding-bottom: 5px;
+}
+
+/* Projects buttons */
+.project .btn {
+  display: inline-block;
+  margin: 5px 10px 10px 0;
+  padding: 8px 15px;
+  background-color: #00bcd4;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.project .btn:hover {
+  background-color: #007c91;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5em;
+  background: #222;
+  color: white;
+  margin-top: 2em;
 }
