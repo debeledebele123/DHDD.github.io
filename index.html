@@ -5,161 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tankiso | Developer Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* ===== BASIC STYLES ===== */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #222;
-      line-height: 1.6;
-    }
-    h1, h2, h3 {
-      color: #003366;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    p {
-      text-align: justify;
-    }
-
-    /* ===== NAVBAR ===== */
-    nav {
-      background: #003366;
-      color: white;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      margin: 0 10px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    /* ===== MENU ICON ===== */
-    .menu-icon {
-      display: none;
-      font-size: 26px;
-      cursor: pointer;
-    }
-
-    /* ===== MOBILE MENU ===== */
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background: #003366;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        width: 100%;
-      }
-      nav ul.show {
-        display: flex;
-      }
-      .menu-icon {
-        display: block;
-      }
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      text-align: center;
-      padding-top: 120px;
-    }
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-      border: 3px solid #003366;
-    }
-
-    /* ===== BUTTON ===== */
-    .btn {
-      background: #003366;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-    }
-    .btn:hover {
-      background: #0055aa;
-    }
-
-    /* ===== WHATSAPP FLOAT ===== */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      font-size: 28px;
-      width: 55px;
-      height: 55px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      text-decoration: none;
-      z-index: 1000;
-    }
-    .whatsapp-float:hover {
-      background-color: #20b358;
-    }
-
-    /* ===== FADE-IN ANIMATION ===== */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #003366;
-      color: white;
-      margin-top: 30px;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- ===== NAVIGATION ===== -->
-  <nav>
-    <span class="menu-icon" onclick="toggleMenu()">☰</span>
-    <ul id="nav-menu">
+  <!-- NAVIGATION BAR -->
+  <nav id="navbar">
+    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -168,115 +21,189 @@
     </ul>
   </nav>
 
-  <!-- ===== HEADER ===== -->
+  <!-- HEADER / HERO -->
   <header class="fade-in">
     <img src="profile.jpg" alt="Tankiso Profile Picture" class="profile-img">
     <h1>Tankiso Justice Mabaleha</h1>
-    <p>Web Developer | Software Engineer | Multimedia Specialist</p>
+    <p>Web Developer | PHP & MySQL Enthusiast</p>
   </header>
 
-  <!-- ===== ABOUT SECTION ===== -->
+  <!-- ABOUT SECTION -->
   <section id="about" class="fade-in">
     <h2>About Me</h2>
-    <p>
-      I’m <strong>Tankiso Justice Mabaleha</strong>, a dedicated <strong>Software Engineer and Multimedia Developer</strong>
-      with a strong academic background in <strong>Software Engineering with Multimedia</strong> from
-      <strong>Limkokwing University of Creative Technology (LUCT) Lesotho</strong>.
-    </p>
-    <p>
-      My education has equipped me with a blend of <strong>technical and creative skills</strong> — from programming
-      and database design to multimedia production and user interface development.
-    </p>
-    <p>
-      I specialize in developing <strong>web and mobile applications</strong> using <strong>PHP, MySQL, HTML, CSS, JavaScript, and C++</strong>,
-      and I have experience in <strong>database management, debugging, and performance optimization</strong>.
-    </p>
-    <p>
-      My background in <strong>Adobe Creative Suite</strong> (Photoshop, Illustrator, After Effects) and tools like
-      <strong>Unity</strong> and <strong>3Ds Max</strong> allows me to merge creativity with technology — building visually appealing
-      and functional software solutions.
-    </p>
-    <p>
-      I’m passionate about creating systems that solve real-world problems, improve user experience,
-      and enhance productivity through innovation and teamwork.
-    </p>
+    <p>I build web applications using PHP, MySQL, and modern front-end technologies. I love turning ideas into functional, user-friendly systems.</p>
   </section>
 
-  <!-- ===== PROJECTS SECTION ===== -->
+  <!-- PROJECTS SECTION -->
   <section id="projects" class="fade-in">
     <h2>My Projects</h2>
-    <p style="text-align: justify;">Here are a few highlights from my GitHub showcasing my recent PHP and web development projects.</p>
-    <ul>
-      <li><strong>DHDD-SMS:</strong> A PHP & MySQL Student Management System for managing students and generating report cards.</li>
-      <li><strong>Chatboard:</strong> An admin-user chat application with real-time message display.</li>
-      <li><strong>Email Sender:</strong> A simple PHPMailer contact form for sending messages.</li>
-    </ul>
+    <div class="projects-container">
+
+      <div class="project-card">
+        <img src="dhdd-sms.png" alt="DHDD-SMS Project">
+        <div class="overlay">
+          <h3>DHDD-SMS</h3>
+          <p>A PHP & MySQL Student Management System for managing students and generating report cards.</p>
+          <a href="https://github.com/debeledebele123/DHDD-SMS" target="_blank" class="btn">View Code</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="chatboard.png" alt="Chatboard Project">
+        <div class="overlay">
+          <h3>Chatboard</h3>
+          <p>An admin-user chat application with real-time message display using PHP and MySQL.</p>
+          <a href="https://github.com/debeledebele123/Chatboard" target="_blank" class="btn">View Code</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="email-sender.png" alt="Email Sender Project">
+        <div class="overlay">
+          <h3>Email Sender</h3>
+          <p>Simple contact form using PHPMailer for email delivery.</p>
+          <a href="https://github.com/debeledebele123/Email-Sender" target="_blank" class="btn">View Code</a>
+        </div>
+      </div>
+
+    </div>
   </section>
 
-  <!-- ===== SKILLS SECTION ===== -->
+  <!-- SKILLS SECTION -->
   <section id="skills" class="fade-in">
     <h2>Skills & Technologies</h2>
     <ul>
-      <li>PHP, MySQL, HTML, CSS, JavaScript</li>
-      <li>Bootstrap & Responsive Web Design</li>
-      <li>Adobe Photoshop, Illustrator, After Effects</li>
-      <li>Database Design & Debugging</li>
+      <li>PHP, MySQL</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Bootstrap & Responsive Design</li>
       <li>Git & GitHub</li>
+      <li>PHPMailer</li>
     </ul>
   </section>
 
-  <!-- ===== RESUME SECTION ===== -->
+  <!-- RESUME SECTION -->
   <section id="resume" class="fade-in">
-    <h2>Resume</h2>
-    <p style="text-align: justify;">Download my full professional resume below:</p>
-    <a href="Tankiso_Resume.pdf" download class="btn">📄 Download Resume</a>
+    <h2>Professional Profile</h2>
+
+    <div class="resume-section">
+      <h3>Personal Information</h3>
+      <p><strong>Name:</strong> Tankiso Justice Mabaleha</p>
+      <p><strong>Address:</strong> Ha-Aarone, Mapoteng Berea</p>
+      <p><strong>Phone:</strong> +266 5615 5192</p>
+      <p><strong>Email:</strong> <a href="mailto:mabalehatankiso1@gmail.com">mabalehatankiso1@gmail.com</a></p>
+    </div>
+
+    <div class="resume-section">
+      <h3>Objective</h3>
+      <p>To enhance my professional skills, capabilities and knowledge in an organization which recognizes the value of hard work and trusts me with responsibilities and challenges as a highly motivated, results driven and dedicated IT professional with an incredible academic history that includes BSc (Hon) in Software Engineering With Multimedia.</p>
+    </div>
+
+    <div class="resume-section">
+      <h3>Experience</h3>
+      <p>I gained experience working as a volunteer at Vodacom project called CAMARA teaching Secondary students about Web Development
+        at St. Michael’s, Bonhomme, Itekeng High School. Currently, I am a temporary Technician teacher at Lekokoaneng High School.
+        I also gained experience during my final year project developing a fully functional project. Through individual and 
+        group projects, I gained experience solving complex problems as a software engineer.</p>
+      <p><strong>Software Responsibilities:</strong></p>
+      <ul>
+        <li>Develop web interfaces with different languages</li>
+        <li>Database analysis with web and applications</li>
+        <li>Debugging and performance analysis</li>
+        <li>Custom software and multimedia solutions</li>
+        <li>Mobile applications</li>
+        <li>Computer networking</li>
+        <li>Software testing and reliability</li>
+      </ul>
+      <p><strong>Skills Highlights:</strong></p>
+      <ul>
+        <li>Project management</li>
+        <li>Strong decision maker</li>
+        <li>Complex problem solver</li>
+      </ul>
+    </div>
+
+    <div class="resume-section">
+      <h3>Education</h3>
+      <ul>
+        <li>Aug 2018 – Nov 2022: BSc (Hon) Software Engineering With Multimedia, Limkokwing University of Creative Technology (LUCT) Lesotho</li>
+        <li>Diploma in Information and Communication Technology, RELLYWAN</li>
+      </ul>
+    </div>
+
+    <div class="resume-section">
+      <h3>Additional Skills</h3>
+      <ul>
+        <li>Microsoft Office: Word, Excel, Access, Publisher, PowerPoint</li>
+        <li>Adobe Suite: Photoshop, Illustrator, After Effects</li>
+        <li>Microsoft Expression Blend, 3Ds Max, Unity</li>
+        <li>Database: Access, SQL, Firebase, XAMPP</li>
+        <li>Programming: C++, C, SQL, HTML5, Java, CSS, PHP OOP</li>
+        <li>Hardware & Software integration, Mobile & Computer repairs</li>
+      </ul>
+    </div>
+
+    <div class="resume-section">
+      <h3>References</h3>
+      <ul>
+        <li>Mr. Ntholi Nkhatho : +266 6328 2962</li>
+        <li>Mr. Daniel Jegede : +266 6386 4507</li>
+        <li>Mr. Mokhabi : +266 5627 7876</li>
+      </ul>
+    </div>
+
+    <div class="download-resume">
+      <a href="Tankiso_Resume.pdf" download class="btn">📄 Download Resume</a>
+    </div>
   </section>
 
-  <!-- ===== CONTACT SECTION ===== -->
+  <!-- CONTACT SECTION -->
   <section id="contact" class="fade-in">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:mabalehatankiso1@gmail.com">mabalehatankiso1@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/debeledebele123" target="_blank">@debeledebele123</a></p>
+    <p>Email: <a href="mailto:debeledebele@example.com">debeledebele@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/debeledebele123" target="_blank">@DHDD</a></p>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 Tankiso | Built with ❤️ and GitHub Pages</p>
   </footer>
 
-  <!-- ===== WHATSAPP ICON ===== -->
-  <a href="https://wa.me/26656155192" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
-    💬
+  <!-- FLOATING WHATSAPP ICON -->
+  <a href="https://wa.me/26656155192" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- ===== SCRIPT ===== -->
+  <!-- SCRIPTS -->
   <script>
-    // Menu toggle
-    function toggleMenu() {
-      document.getElementById('nav-menu').classList.toggle('show');
-    }
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
 
-    // Smooth scroll
+    // Smooth scrolling
     document.querySelectorAll('nav a').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
+        navLinks.classList.remove('active'); // close menu
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
-        document.getElementById('nav-menu').classList.remove('show');
       });
     });
 
     // Fade-in animation
     const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.1 };
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
       entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
+        if(!entry.isIntersecting) return;
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        appearOnScroll.unobserve(entry.target);
       });
     }, appearOptions);
-    faders.forEach(fader => appearOnScroll.observe(fader));
+    faders.forEach(fader => { appearOnScroll.observe(fader); });
   </script>
 
 </body>
