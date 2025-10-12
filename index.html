@@ -22,9 +22,10 @@
   <!-- HEADER SECTION -->
   <header class="fade-in">
     <img src="profile.jpg" alt="Tankiso Profile Picture" class="profile-img">
-    <h1>Tankiso Mabaleha</h1>
+    <h1>Tankiso Justice Mabaleha</h1>
+    <p>Web Developer | PHP & MySQL Enthusiast</p>
   </header>
-<center>
+
   <!-- ABOUT ME SECTION -->
   <section id="about" class="fade-in">
     <h2>About Me</h2>
@@ -39,21 +40,18 @@
       <h3>DHDD-SMS</h3>
       <p>A PHP and MySQL-based Student Management System for managing students and generating report cards.</p>
       <a href="https://github.com/debeledebele123/DHDD-SMS" target="_blank" class="btn">View Code</a>
-      <a href="https://your-live-url-dhddsms.com" target="_blank" class="btn">Live Demo</a>
     </div>
 
     <div class="project">
       <h3>Chatboard</h3>
       <p>An admin-user chat application with real-time message display using PHP and MySQL.</p>
       <a href="https://github.com/debeledebele123/Chatboard" target="_blank" class="btn">View Code</a>
-      <a href="https://your-live-url-chatboard.com" target="_blank" class="btn">Live Demo</a>
     </div>
 
     <div class="project">
       <h3>Email Sender</h3>
       <p>Simple contact form using PHPMailer for email delivery.</p>
       <a href="https://github.com/debeledebele123/Email-Sender" target="_blank" class="btn">View Code</a>
-      <a href="https://your-live-url-emailsender.com" target="_blank" class="btn">Live Demo</a>
     </div>
   </section>
 
@@ -68,7 +66,7 @@
       <li>PHPMailer</li>
     </ul>
   </section>
-</center>
+
   <!-- RESUME / PROFESSIONAL PROFILE SECTION -->
   <section id="resume" class="fade-in">
     <h2>Professional Profile</h2>
@@ -144,6 +142,10 @@
       </ul>
     </div>
 
+    <!-- Download Resume Button -->
+    <div class="download-resume">
+      <a href="Tankiso_Resume.pdf" download class="btn">📄 Download Resume</a>
+    </div>
   </section>
 
   <!-- CONTACT SECTION -->
@@ -151,10 +153,6 @@
     <h2>Contact</h2>
     <p>Email: <a href="mailto:debeledebele@example.com">debeledebele@example.com</a></p>
     <p>GitHub: <a href="https://github.com/debeledebele123" target="_blank">@DHDD</a></p>
-<!-- Download Resume Button -->
-<div class="download-resume">
-  <a href="Tankiso_Resume.pdf" download class="btn">📄 Download Resume</a>
-</div>
   </section>
 
   <!-- FOOTER -->
@@ -162,8 +160,9 @@
     <p>© 2025 Tankiso | Built with ❤️ and GitHub Pages</p>
   </footer>
 
-  <!-- SMOOTH SCROLL SCRIPT -->
+  <!-- SMOOTH SCROLL + FADE-IN SCRIPT -->
   <script>
+    // Smooth scrolling
     document.querySelectorAll('nav a').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -173,7 +172,7 @@
       });
     });
 
-    // Fade-in animation on scroll
+    // Fade-in animation
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
     const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
