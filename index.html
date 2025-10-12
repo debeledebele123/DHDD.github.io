@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tankiso | Developer Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
   <!-- NAVIGATION BAR -->
   <nav id="navbar">
-    <ul>
+    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#resume">Resume</a></li>
@@ -20,7 +23,7 @@
 
   <!-- HEADER / HERO -->
   <header class="fade-in">
-    <img src="profile.jpg" alt="Tankiso Profile Picture" class="profile-img">
+    <img src="images/profile.jpg" alt="Tankiso Profile Picture" class="profile-img">
     <h1>Tankiso Justice Mabaleha</h1>
     <p>Web Developer | PHP & MySQL Enthusiast</p>
   </header>
@@ -37,7 +40,7 @@
     <div class="projects-container">
 
       <div class="project-card">
-        <img src="dhdd-sms.png" alt="DHDD-SMS Project">
+        <img src="images/dhdd-sms.png" alt="DHDD-SMS Project">
         <div class="overlay">
           <h3>DHDD-SMS</h3>
           <p>A PHP & MySQL Student Management System for managing students and generating report cards.</p>
@@ -46,7 +49,7 @@
       </div>
 
       <div class="project-card">
-        <img src="chatboard.png" alt="Chatboard Project">
+        <img src="images/chatboard.png" alt="Chatboard Project">
         <div class="overlay">
           <h3>Chatboard</h3>
           <p>An admin-user chat application with real-time message display using PHP and MySQL.</p>
@@ -55,7 +58,7 @@
       </div>
 
       <div class="project-card">
-        <img src="email-sender.png" alt="Email Sender Project">
+        <img src="images/email-sender.png" alt="Email Sender Project">
         <div class="overlay">
           <h3>Email Sender</h3>
           <p>Simple contact form using PHPMailer for email delivery.</p>
@@ -165,12 +168,25 @@
     <p>© 2025 Tankiso | Built with ❤️ and GitHub Pages</p>
   </footer>
 
-  <!-- SMOOTH SCROLL + FADE-IN SCRIPT -->
+  <!-- FLOATING WHATSAPP ICON -->
+  <a href="https://wa.me/26656155192" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPTS -->
   <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
     // Smooth scrolling
     document.querySelectorAll('nav a').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
+        navLinks.classList.remove('active'); // close menu
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
@@ -187,7 +203,6 @@
         appearOnScroll.unobserve(entry.target);
       });
     }, appearOptions);
-
     faders.forEach(fader => { appearOnScroll.observe(fader); });
   </script>
 
