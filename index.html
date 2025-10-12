@@ -8,8 +8,19 @@
 </head>
 <body>
 
+  <!-- NAVIGATION BAR -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- HEADER SECTION -->
-  <header>
+  <header class="fade-in">
     <img src="logo.png" alt="Tankiso Logo" class="logo">
     <h1>👋 Hi, I'm <span>Tankiso</span></h1>
     <img src="profile.jpg" alt="Tankiso Profile Picture" class="profile-img">
@@ -17,13 +28,13 @@
   </header>
 
   <!-- ABOUT ME SECTION -->
-  <section id="about">
+  <section id="about" class="fade-in">
     <h2>About Me</h2>
     <p>I build web applications using PHP, MySQL, and modern front-end technologies. I love turning ideas into functional, user-friendly systems.</p>
   </section>
 
   <!-- PROJECTS SECTION -->
-  <section id="projects">
+  <section id="projects" class="fade-in">
     <h2>My Projects</h2>
 
     <div class="project">
@@ -49,7 +60,7 @@
   </section>
 
   <!-- SKILLS SECTION -->
-  <section id="skills">
+  <section id="skills" class="fade-in">
     <h2>Skills & Technologies</h2>
     <ul>
       <li>PHP, MySQL</li>
@@ -61,7 +72,7 @@
   </section>
 
   <!-- RESUME / PROFESSIONAL PROFILE SECTION -->
-  <section id="resume">
+  <section id="resume" class="fade-in">
     <h2>Professional Profile</h2>
 
     <!-- Personal Info -->
@@ -137,7 +148,7 @@
   </section>
 
   <!-- CONTACT SECTION -->
-  <section id="contact">
+  <section id="contact" class="fade-in">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:debele@example.com">debele@example.com</a></p>
     <p>GitHub: <a href="https://github.com/debeledebele123" target="_blank">@debeledebele123</a></p>
@@ -147,6 +158,31 @@
   <footer>
     <p>© 2025 Tankiso | Built with ❤️ and GitHub Pages</p>
   </footer>
+
+  <!-- SMOOTH SCROLL SCRIPT -->
+  <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Fade-in animation on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => { appearOnScroll.observe(fader); });
+  </script>
 
 </body>
 </html>
