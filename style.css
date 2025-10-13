@@ -23,7 +23,6 @@ nav#navbar {
 }
 
 .nav-links { display: flex; list-style: none; margin:0; padding:0; }
-
 .nav-links li { margin: 0; }
 
 .nav-links a {
@@ -48,63 +47,6 @@ header .profile-img { width:150px; height:150px; border-radius:50%; border:4px s
 section { max-width:900px; margin:2em auto; background:#fff; padding:2em; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
 h2 { text-align:center; color:#007c91; margin-bottom:1em; }
 
-/* PROJECT CARDS */
-.projects-container { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
-.project-card { position:relative; width:280px; height:200px; border-radius:10px; overflow:hidden; cursor:pointer; transition: transform 0.3s, box-shadow 0.3s; }
-.project-card img { width:100%; height:100%; object-fit:cover; display:block; }
-.project-card:hover { transform: scale(1.05); box-shadow:10 8px 20px rgba(0,0,0,0.2); }
-.project-card .overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.75); color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:15px; opacity:0; transition: opacity 0.3s ease; border-radius:10px; }
-.project-card:hover .overlay { opacity:1; }
-.project-card .overlay .btn { margin:5px; padding:8px 12px; background:#00bcd4; border-radius:5px; color:#fff; text-decoration:none; transition: 0.3s; }
-.project-card .overlay .btn:hover { background:#007c91; transform:translateY(-2px); }
-
-/* SKILLS */
-#skills ul { list-style:none; padding:0; display:flex; flex-wrap:wrap; justify-content:center; }
-#skills li { background:#00bcd4; color:#fff; margin:5px 10px; padding:8px 12px; border-radius:20px; font-weight:bold; transition:0.3s; }
-#skills li:hover { background:#007c91; }
-
-/* RESUME */
-.resume-section { margin-bottom:20px; padding:15px; border-left:5px solid #00bcd4; background:#f7f9fa; border-radius:8px; }
-.download-resume { text-align:center; margin-top:20px; }
-.download-resume .btn { background:#0078d7; color:#fff; padding:12px 25px; font-size:1.1em; border-radius:5px; }
-.download-resume .btn:hover { background:#005f9e; transform:translateY(-2px); }
-
-/* CONTACT */
-section#contact a { color:#00bcd4; text-decoration:none; font-weight:bold; }
-section#contact a:hover { text-decoration:underline; }
-
-/* FOOTER */
-footer { text-align:center; padding:1.5em; background:#222; color:#fff; margin-top:2em; }
-
-/* FLOATING WHATSAPP */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background:#25d366;
-  color:#fff;
-  border-radius:50%;
-  font-size:2em;
-  padding:15px;
-  z-index:100;
-  box-shadow:0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
-}
-.whatsapp-float:hover { transform:translateY(-5px); }
-
-/* FADE-IN */
-.fade-in { opacity:0; transform:translateY(20px); transition: all 1s ease; }
-.fade-in.visible { opacity:1; transform:translateY(0); }
-
-/* RESPONSIVE */
-@media screen and (max-width:768px){
-  .menu-toggle { display:block; }
-  .nav-links { position: fixed; left: -100%; top: 70px; flex-direction:column; background:#222; width:200px; height:100%; transition:0.3s; padding-top:2em; }
-  .nav-links.active { left:0; }
-  .nav-links li { margin:1em 0; }
-  .project-card { width:90%; height:180px; }
-  #skills li { width:100%; text-align:center; margin:5px 0; }
-}
 /* PROJECT CARDS */
 .projects-container {
   display: flex;
@@ -168,14 +110,51 @@ footer { text-align:center; padding:1.5em; background:#222; color:#fff; margin-t
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
+/* SKILLS */
+#skills ul { list-style:none; padding:0; display:flex; flex-wrap:wrap; justify-content:center; }
+#skills li { background:#00bcd4; color:#fff; margin:5px 10px; padding:8px 12px; border-radius:20px; font-weight:bold; transition:0.3s; }
+#skills li:hover { background:#007c91; }
+
+/* RESUME */
+.resume-section { margin-bottom:20px; padding:15px; border-left:5px solid #00bcd4; background:#f7f9fa; border-radius:8px; }
+.download-resume { text-align:center; margin-top:20px; }
+.download-resume .btn { background:#0078d7; color:#fff; padding:12px 25px; font-size:1.1em; border-radius:5px; }
+.download-resume .btn:hover { background:#005f9e; transform:translateY(-2px); }
+
+/* CONTACT */
+section#contact a { color:#00bcd4; text-decoration:none; font-weight:bold; }
+section#contact a:hover { text-decoration:underline; }
+
+/* FOOTER */
+footer { text-align:center; padding:1.5em; background:#222; color:#fff; margin-top:2em; }
+
+/* FLOATING WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background:#25d366;
+  color:#fff;
+  border-radius:50%;
+  font-size:2em;
+  padding:15px;
+  z-index:100;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+.whatsapp-float:hover { transform:translateY(-5px); }
+
+/* FADE-IN */
+.fade-in { opacity:0; transform:translateY(20px); transition: all 1s ease; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
+
 /* RESPONSIVE */
 @media screen and (max-width:768px){
-  .project-card {
-    width: 90%;
-    height: auto;
-  }
-  .project-card img {
-    height: 180px;
-  }
+  .menu-toggle { display:block; }
+  .nav-links { position: fixed; left: -100%; top: 70px; flex-direction:column; background:#222; width:200px; height:100%; transition:0.3s; padding-top:2em; }
+  .nav-links.active { left:0; }
+  .nav-links li { margin:1em 0; }
+  .project-card { width:90%; height:auto; }
+  .project-card img { height:180px; }
+  #skills li { width:100%; text-align:center; margin:5px 0; }
 }
-
