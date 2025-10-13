@@ -105,3 +105,77 @@ footer { text-align:center; padding:1.5em; background:#222; color:#fff; margin-t
   .project-card { width:90%; height:180px; }
   #skills li { width:100%; text-align:center; margin:5px 0; }
 }
+/* PROJECT CARDS */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.project-card {
+  position: relative;
+  width: 280px;
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #00bcd4;
+}
+
+.project-card p {
+  padding: 0 10px 10px;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* View-Project button always visible */
+.project-card a {
+  display: inline-block;
+  margin: 10px 0 20px;
+  padding: 10px 20px;
+  background: #00bcd4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.project-card a:hover {
+  background: #007c91;
+  transform: translateY(-2px);
+}
+
+/* Hover effect on card */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:768px){
+  .project-card {
+    width: 90%;
+    height: auto;
+  }
+  .project-card img {
+    height: 180px;
+  }
+}
+
