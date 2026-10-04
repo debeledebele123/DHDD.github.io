@@ -6,13 +6,12 @@
   <title>Tankiso | Developer Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>section { scroll-margin-top: 90px; }</style>
 </head>
 <body>
-
-  <!-- NAVIGATION BAR -->
-  <nav id="navbar">
-    <div class="menu-toggle" id="mobile-menu">&#9776;</div>
-    <ul class="nav-links">
+  <nav id="navbar" aria-label="Main navigation">
+    <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation" aria-controls="portfolio-navigation" aria-expanded="false" style="background:none; border:0; color:inherit; font:inherit; cursor:pointer;">&#9776;</button>
+    <ul class="nav-links" id="portfolio-navigation">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -20,20 +19,15 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
-  <!-- HEADER / HERO -->
   <header class="fade-in">
     <img src="profile.jpg" alt="Tankiso Profile Picture" class="profile-img">
     <h1>Tankiso Justice Mabaleha</h1>
-    <p>Web Developer | PHP & MySQL Enthusiast</p>
+    <p>ICT Teacher | Software Engineer | Web Developer</p>
   </header>
-
-  <!-- ABOUT SECTION -->
-<!-- Replace your existing <section id="projects"> with this entire section.
-     For each new project, replace the labelled placeholder div with an image
-     once you have a real screenshot, for example:
-     <img src="dhddsms.png" alt="DHDDSMS dashboard" loading="lazy">
--->
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>I am Tankiso Justice Mabaleha, an ICT Teacher, Software Engineer and Web Developer. I build responsive websites and management systems using PHP, MySQL, HTML, CSS and JavaScript.</p>
+  </section>
 <section id="projects" class="fade-in">
   <h2>My Projects</h2>
   <div class="projects-container">
@@ -123,49 +117,148 @@
   </div>
 </section>
 
-
-  <!-- FOOTER -->
+  <section id="skills" class="fade-in">
+    <h2>Skills &amp; Technologies</h2>
+    <ul>
+      <li>PHP, MySQL</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Bootstrap &amp; Responsive Design</li>
+      <li>Git &amp; GitHub</li>
+      <li>PHPMailer</li>
+    </ul>
+  </section>
+  <section id="resume" class="fade-in">
+    <h2>Professional Profile</h2>
+    <div class="resume-section">
+      <h3>Personal Information</h3>
+      <p><strong>Name:</strong> Tankiso Justice Mabaleha</p>
+      <p><strong>Address:</strong> Ha-Aarone, Mapoteng Berea</p>
+      <p><strong>Phone:</strong> +266 5615 5192</p>
+      <p><strong>Email:</strong> <a href="mailto:mabalehatankiso1@gmail.com">mabalehatankiso1@gmail.com</a></p>
+    </div>
+    <div class="resume-section">
+      <h3>Objective</h3>
+      <p>To enhance my professional skills, capabilities and knowledge in an organization which recognizes the value of hard work and trusts me with responsibilities and challenges as a highly motivated, results driven and dedicated IT professional with an incredible academic history that includes BSc (Hon) in Software Engineering With Multimedia.</p>
+    </div>
+    <div class="resume-section">
+      <h3>Experience</h3>
+      <h4>ICT Instructor – Vodacom CAMARA Project</h4>
+      <p><strong>St. Michael’s High School, Bonhomme High School &amp; Itekeng High School</strong><br>Volunteer Instructor</p>
+      <ul>
+        <li>Taught Secondary students the fundamentals of Web Development.</li>
+        <li>Supported learners with practical coding, debugging, and digital literacy.</li>
+        <li>Built strong, positive working relationships with staff and students.</li>
+      </ul>
+      <h4>Technician Teacher – Lekokoaneng High School</h4>
+      <p><strong>Temporary Position</strong></p>
+      <ul>
+        <li>Teaching and supporting learners in ICT and related technical subjects.</li>
+        <li>Assisting with computer maintenance, networking, and system support.</li>
+        <li>Providing practical demonstrations and guiding students through hands-on ICT tasks.</li>
+      </ul>
+      <h4>Software Engineering Project Experience</h4>
+      <ul>
+        <li>Completed a fully functional and competitive final-year software engineering project.</li>
+        <li>Gained strong experience working both independently and in group projects.</li>
+        <li>Strengthened abilities in critical thinking, problem-solving, and system design.</li>
+      </ul>
+      <h4>Technical Responsibilities &amp; Competencies</h4>
+      <ul>
+        <li>Web interface development using multiple programming languages</li>
+        <li>Database analysis and development for web and mobile applications</li>
+        <li>Debugging, troubleshooting, and performance optimization</li>
+        <li>Custom software and multimedia solutions</li>
+        <li>Mobile application development</li>
+        <li>Computer networking and system configuration</li>
+        <li>Software testing, reliability evaluation, and quality assurance</li>
+      </ul>
+      <h4>Professional Skills</h4>
+      <ul>
+        <li>Project management</li>
+        <li>Strong decision-making ability</li>
+        <li>Complex problem-solving</li>
+        <li>Creative and innovative thinking</li>
+        <li>Service-focused approach</li>
+      </ul>
+    </div>
+    <div class="resume-section">
+      <h3>Education</h3>
+      <ul>
+        <li>Aug 2018 – Nov 2022: BSc (Honours) Software Engineering with Multimedia, Limkokwing University of Creative Technology (LUCT) Lesotho</li>
+        <li>Diploma in Information and Communication Technology, Rellywan Institute</li>
+      </ul>
+    </div>
+    <div class="resume-section">
+      <h3>Additional Skills</h3>
+      <ul>
+        <li>Microsoft Office: Word, Excel, Access, Publisher, PowerPoint</li>
+        <li>Adobe Master Collection: Photoshop, Illustrator, After Effects, Audition, Lightroom Classic</li>
+        <li>Design &amp; Development Tools: Microsoft Expression Blend, 3Ds Max, Unity</li>
+        <li>Database Tools: Microsoft Access, SQL, Firebase, XAMPP</li>
+        <li>Programming Languages: C++, C, SQL, HTML5, Java, CSS, PHP (OOP)</li>
+        <li>Technical Support: Hardware &amp; software troubleshooting, mobile and computer repairs</li>
+      </ul>
+    </div>
+    <div class="resume-section">
+      <h3>References</h3>
+      <ul>
+        <li>Mr. Ntholi Nkhatho – +266 6328 2962</li>
+        <li>Mr. Daniel Jegede – +266 6386 4507</li>
+        <li>Mr. Mokhabi – +266 5627 7876</li>
+      </ul>
+    </div>
+    <div class="download-resume">
+      <a href="Tankiso_Resume.pdf" download class="btn">📄 Download Resume</a>
+    </div>
+  </section>
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mabalehatankiso1@gmail.com">mabalehatankiso1@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/debeledebele123" target="_blank" rel="noopener noreferrer">@debeledebele123</a></p>
+  </section>
   <footer>
-    <p>© 2025 Tankiso | Built with ❤️ and GitHub Pages</p>
+    <p>© 2026 Tankiso | Built with ❤️ and GitHub Pages</p>
   </footer>
-
-  <!-- FLOATING WHATSAPP ICON -->
-  <a href="https://wa.me/26656155192" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+  <a href="https://wa.me/26656155192" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact Tankiso on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
-
-  <!-- SCRIPTS -->
   <script>
-    // Mobile menu toggle
     const menuToggle = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
     menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      const expanded = navLinks.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', String(expanded));
     });
-
-    // Smooth scrolling
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        navLinks.classList.remove('active'); // close menu
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
+    document.querySelectorAll('#navbar a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(event) {
+        const target = document.getElementById(this.getAttribute('href').slice(1));
+        if (!target) return;
+        event.preventDefault();
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        target.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'start'
         });
+        history.replaceState(null, '', this.getAttribute('href'));
       });
     });
-
-    // Fade-in animation
     const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-      entries.forEach(entry => {
-        if(!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        appearOnScroll.unobserve(entry.target);
-      });
-    }, appearOptions);
-    faders.forEach(fader => { appearOnScroll.observe(fader); });
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      faders.forEach(fader => observer.observe(fader));
+    } else {
+      faders.forEach(fader => fader.classList.add('visible'));
+    }
   </script>
-
 </body>
 </html>
+
+
+  
